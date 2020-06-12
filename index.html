@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Login</title>
+    </head>
+    <body id="navy">
+        <div class="jumbotron">
+            <div>
+                <img src="avatar.png" class="avatar">
+            </div>
+            <div class="log">
+                <h1 class="display-4">LOG IN </h1>
+            </div>
+        </div>
+        <div class="wrks">
+            <h2 class="gorg" id="above"></h2>
+        </div>
+        <form class="for">
+            <div class="form-group">
+                <label class="gorg" >Username:</label>
+                <input type="text" name="username" class="form-control" id="username"/>
+            </div>
+            <div class="form-group">
+                <label class="gorg" >Password:</label>
+                <input type="password" name="password" class="form-control" id="password"/>
+            </div>
+            <div>
+                <input type="button" class="round" value="Login" id="fnt" onclick="validate()"/>
+            </div>
+        </form>
+        <div class="wrks">
+            <h2 class="gorg" id="below"></h2>
+        </div>
+
+        <script>
+            function validate(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (username == "user" && password == "user"){
+                    document.getElementById("above").innerHTML = "";
+                    document.getElementById("below").innerHTML = "It works!";
+                    return false;
+                }
+                else if (username == "admin" && password == "admin"){
+                    document.getElementById("below").innerHTML = "";
+                    document.getElementById("above").innerHTML = "It works!";
+                    return false;
+                }
+                else{
+                    alert("Incorrect Credentials!")
+                }
+            }
+        </script>
+    </body>
+</html>
